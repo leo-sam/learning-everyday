@@ -25,6 +25,12 @@ public class BeanChangeUtil<T> {
         }
     }
 
+    /**
+     * contrastObj
+     * @param oldBean old bean
+     * @param newBean new bean
+     * @return change
+     */
     @SuppressWarnings({ "unchecked", "rawtypes" })
     public String contrastObj(Object oldBean, Object newBean) {
         T pojo1 = (T) oldBean;
