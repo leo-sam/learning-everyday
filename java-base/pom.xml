@@ -21,14 +21,30 @@
     <fastjson.version>1.2.78</fastjson.version>
     <lombok.version>1.18.10</lombok.version>
 
+    <dozer.version>5.5.1</dozer.version>
+    <dozer-jdk8-support.version>1.0.6</dozer-jdk8-support.version>
   </properties>
 
   <dependencies>
+    <!--    json-->
     <dependency>
       <groupId>com.alibaba</groupId>
       <artifactId>fastjson</artifactId>
       <version>${fastjson.version}</version>
     </dependency>
+
+    <!--    bean-->
+    <dependency>
+      <groupId>net.sf.dozer</groupId>
+      <artifactId>dozer</artifactId>
+      <version>${dozer.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>io.craftsman</groupId>
+      <artifactId>dozer-jdk8-support</artifactId>
+      <version>${dozer-jdk8-support.version}</version>
+    </dependency>
+
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
