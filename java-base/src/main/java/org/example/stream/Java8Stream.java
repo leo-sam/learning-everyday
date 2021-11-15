@@ -16,8 +16,12 @@ public class Java8Stream {
     public static void main(String[] args) {
         streamListToString();
         streamListToMap();
+        removeDuplicationByStream();
     }
 
+    /**
+     * 把List转化成String
+     */
     public static void streamListToString() {
         List<String> list1 = Arrays.asList("文学","小说","历史","言情","科幻","悬疑");
 
@@ -31,6 +35,9 @@ public class Java8Stream {
         System.out.println("string2 = " + string2);
     }
 
+    /**
+     * 把List转化成Map
+     */
     public static void streamListToMap() {
         User u1 = new User("1", true, "a");
         User u2 = new User("2", false, "b");
@@ -48,6 +55,19 @@ public class Java8Stream {
         System.out.println("userMapWithoutNull = " + userMapWithoutNull);
     }
 
+    /**
+     * 使用java8新特性stream实现List去重(有序)
+     */
+    public static void removeDuplicationByStream() {
+        User u1 = new User("1", true, "a");
+        User u2 = new User("2", false, "b");
+        List<User> userList = Arrays.asList(u1, u2, u2);
+        List<User> newList = userList.stream().distinct().collect(Collectors.toList());
+        System.out.println("newList = " + newList);
+    }
+    /**
+     * 模拟Bean
+     */
     @Data
     public static class User {
         private String about;
