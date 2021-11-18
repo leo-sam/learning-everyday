@@ -34,3 +34,10 @@ python -m pip install apache-flink==1.13.3
 # 支持hdfs需要添加jar包到flink目录flink-shaded-hadoop-2-uber-2.8.3-9.0.jar（版本用最新的就行）
 # wget -P ${FLINK_HOME}/lib/ https://mirrors.cloud.tencent.com/nexus/repository/maven-public/org/apache/flink/flink-shaded-hadoop-2-uber/2.8.3-9.0/flink-shaded-hadoop-2-uber-2.8.3-9.0.jar
 ```
+
+## mysql-cdc
+
+```python
+
+wget -P ${FLINK_HOME}/lib/ https://repo1.maven.org/maven2/com/ververica/flink-connector-mysql-cdc/2.0.2/flink-connector-mysql-cdc-2.0.2.jar
+```
