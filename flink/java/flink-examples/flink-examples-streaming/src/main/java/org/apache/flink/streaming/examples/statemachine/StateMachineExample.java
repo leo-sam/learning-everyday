@@ -110,7 +110,7 @@ public class StateMachineExample {
         if ("hashmap".equals(stateBackend)) {
             final String checkpointDir = params.get("checkpoint-dir");
             boolean asyncCheckpoints = params.getBoolean("async-checkpoints", false);
-            env.setStateBackend(new HashMapStateBackend(asyncCheckpoints));
+//            env.setStateBackend(new HashMapStateBackend(asyncCheckpoints));
             env.getCheckpointConfig().setCheckpointStorage(checkpointDir);
         } else if ("rocks".equals(stateBackend)) {
             final String checkpointDir = params.get("checkpoint-dir");
