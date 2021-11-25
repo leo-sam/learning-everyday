@@ -1,0 +1,25 @@
+配置文件路径： /full/path/mysql/bin/my.cnf （默认为/etc/my.cnf ）
+
+[client]
+default-character-set=utf8mb4
+
+[mysql]
+default-character-set=utf8mb4
+
+[mysqld]
+init_connect='SET collation_connection = utf8mb4_unicode_ci'
+init_connect='SET NAMES utf8mb4'
+character-set-server=utf8mb4
+collation-server=utf8mb4_unicode_ci
+skip-character-set-client-handshake
+
+查看mysql编码方式
+show variables like 'character%';
+
+其中，character_set_client为客户端编码方式；
+character_set_connection为建立连接使用的编码；
+character_set_database数据库的编码；
+character_set_results结果集的编码；
+character_set_server数据库服务器的编码；
+
+只要保证以上四个采用的编码方式一样，就不会出现乱码问题。
